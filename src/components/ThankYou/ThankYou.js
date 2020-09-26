@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 class ThankYou extends Component {
@@ -23,6 +24,6 @@ class ThankYou extends Component {
     }
 }
 
-export default ThankYou;
+export default connect()(ThankYou);
 
 // Don't forget to import Component into parent Component

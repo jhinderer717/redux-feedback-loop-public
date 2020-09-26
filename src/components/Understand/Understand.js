@@ -1,20 +1,41 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 class Understand extends Component {
 
+    state = {
+        understand: '',
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            understand: event.target.value
+        });
+    } // end handleChange
+
+    understandToRedux = () => {
+        // event.preventDefault();
+        console.log('understandToRedux this.state.understand:', this.state.understand);
+        this.props.dispatch({
+            type: "SET_UNDERSTAND",
+            payload: this.state.understand,
+        });
+    } // end understandToRedux
 
     render(){
+        console.log('Understand this.state:', this.state);
         return( // Can also just use <> </> instead of divs
             <div>
                 How well are you understanding the content?
                 <br></br>
-                <input type="number" placeholder='1-6' min="1" max="6" />
+                <input onChange={(event) => this.handleChange(event)} 
+                    type="number" placeholder='1-6' min="1" max="6" />
 
                 <Route>
                     <Link to="/supported">
-                        <button>
+                        <button onClick={this.understandToRedux}>
                             Next
                         </button>
                     </Link>
@@ -24,6 +45,6 @@ class Understand extends Component {
     }
 }
 
-export default Understand;
+export default connect()(Understand);
 
 // Don't forget to import Component into parent Component

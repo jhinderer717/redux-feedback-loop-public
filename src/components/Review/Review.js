@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 class Review extends Component {
@@ -23,6 +24,6 @@ class Review extends Component {
     }
 }
 
-export default Review;
+export default connect()(Review);
 
 // Don't forget to import Component into parent Component

@@ -14,7 +14,7 @@
 
 [x] add component input fields
 
-[ ] get components values into reduxState
+[x] get components values into reduxState
 
 [ ] display reduxState values on review page
 
