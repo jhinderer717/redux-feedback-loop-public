@@ -7,10 +7,15 @@ class Review extends Component {
 
 
     render(){
+        console.log('Review props:', this.props);
         return( // Can also just use <> </> instead of divs
             <div>
-                Review
-                <br></br>
+                <h3>Review Your Feedback</h3>
+                {/* <br></br> */}
+                <p>Feelings: <b>{this.props.feeling}</b></p>
+                <p>Understanding: <b>{this.props.understand}</b></p>
+                <p>Support: <b>{this.props.support}</b></p>
+                <p>Comments: <b>{this.props.comment}</b></p>
 
                 <Route>
                     <Link to="/thankyou">
@@ -24,6 +29,17 @@ class Review extends Component {
     }
 }
 
-export default connect()(Review);
+const mapStateToProps = (reduxState) => {
+    console.log('reduxState from inside mapStateToProps', reduxState);
+    let locationProps = {
+        feeling: reduxState.valuesReducer.feeling,
+        understand: reduxState.valuesReducer.understand,
+        support: reduxState.valuesReducer.support,
+        comment: reduxState.valuesReducer.comment,
+    };
+    return locationProps;
+}
+
+export default connect(mapStateToProps)(Review);
 
 // Don't forget to import Component into parent Component

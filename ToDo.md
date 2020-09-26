@@ -16,7 +16,7 @@
 
 [x] get components values into reduxState
 
-[ ] display reduxState values on review page
+[x] display reduxState values on review page
 
 [ ] submit on review page sends reduxState to database
 
