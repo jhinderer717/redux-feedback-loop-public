@@ -8,7 +8,10 @@ class Supported extends Component {
     render(){
         return( // Can also just use <> </> instead of divs
             <div>
-                Supported?
+                How well are you being supported?
+                <br></br>
+                <input type="number" placeholder='1-6' min="1" max="6" />
+
                 <Route>
                     <Link to="/comments">
                         <button>

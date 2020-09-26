@@ -9,6 +9,8 @@ class Review extends Component {
         return( // Can also just use <> </> instead of divs
             <div>
                 Review
+                <br></br>
+
                 <Route>
                     <Link to="/thankyou">
                         <button>

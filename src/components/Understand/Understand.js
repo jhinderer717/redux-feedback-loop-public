@@ -8,7 +8,10 @@ class Understand extends Component {
     render(){
         return( // Can also just use <> </> instead of divs
             <div>
-                Understand?
+                How well are you understanding the content?
+                <br></br>
+                <input type="number" placeholder='1-6' min="1" max="6" />
+
                 <Route>
                     <Link to="/supported">
                         <button>

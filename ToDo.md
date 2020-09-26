@@ -12,3 +12,4 @@
   [x] review
   [x] thank you
 
+[x] Component input fields

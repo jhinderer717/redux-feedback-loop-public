@@ -8,7 +8,10 @@ class Comments extends Component {
     render(){
         return( // Can also just use <> </> instead of divs
             <div>
-                Comments?
+                Any comments you want to leave?
+                <br></br>
+                <input type="text"/>
+
                 <Route>
                     <Link to="/review">
                         <button>
