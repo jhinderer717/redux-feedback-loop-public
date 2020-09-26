@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import axios from 'axios';
 
 
 class Review extends Component {
 
+    submitFeedback = () => {
+        console.log('in Review, submitting:', this.props);
+        let objToSend = {
+            feeling: this.props.feeling,
+            understand: this.props.understand,
+            support: this.props.support,
+            comment: this.props.comment,
+        }
+        axios({
+            method: 'POST',
+            url: '/review',
+            data: objToSend
+        }).then((response) => {
+            console.log('response is:', response);
+        }).catch((error) => {
+            console.log('frick. - Colin Baumgard', error);
+        }) // end axios POST
+    } // end submit feedback
 
     render(){
         console.log('Review props:', this.props);
@@ -19,7 +38,7 @@ class Review extends Component {
 
                 <Route>
                     <Link to="/thankyou">
-                        <button>
+                        <button onClick={this.submitFeedback}>
                             Submit
                         </button>
                     </Link>

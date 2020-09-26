@@ -18,8 +18,8 @@
 
 [x] display reduxState values on review page
 
-[ ] submit on review page sends reduxState to database
+[x] submit on review page sends reduxState to database
 
-[ ] Leave New Feedback on Thank You page initiates new feedback (new reduxStore value)
+[x] Leave New Feedback on Thank You page initiates new feedback (new reduxStore value, this is default)
 
 [ ] block navigation if blank fields (see above for which)
