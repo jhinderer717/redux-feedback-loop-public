@@ -52,7 +52,7 @@ const valuesReducer = (state = initialState, action) => { // why doesn't the sta
 }
 
 
-const storeInstance = createStore(
+const storeInstance = createStore( // This isn't needed if only 1 reducer is used right?
   combineReducers({
     valuesReducer,
   }),

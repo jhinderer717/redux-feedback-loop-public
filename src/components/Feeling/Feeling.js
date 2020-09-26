@@ -27,20 +27,10 @@ class Feeling extends Component {
         });
     } // end feelingToRedux
 
-
-
-        // console.log('in feelingToRedux');
-        // Axios({
-        //     method: 'POST',
-        //     url: '/feeling',
-        //     data: this.state
-        // }).then((response) => {
-        //     console.log('POST complete');
-        // }).catch(err => {
-        //     console.log('POST err', err);
-        // }); // end axios
-
-
+    giveWarning = () => {
+        console.log('Enter a value');
+        alert("Enter a value.");
+    } // end giveWarning
 
     render(){
         console.log('Feeling this.state:', this.state);
@@ -51,13 +41,20 @@ class Feeling extends Component {
                 <input onChange={(event) => this.handleChange(event)} 
                     type="number" placeholder='1-6' min="1" max="6" />
 
-                <Route>
-                    <Link to="/understand">
-                        <button onClick={this.feelingToRedux}>
-                            Next
-                        </button>
-                    </Link>
-                </Route>
+                {                                    // conditional renderind works here because every
+                    this.state.feeling === '' ?      // change on the page re-renders the return function
+                    <button onClick={this.giveWarning}>
+                        Next
+                    </button>
+                    :
+                    <Route>
+                        <Link to="/understand">
+                            <button onClick={this.feelingToRedux}>
+                                Next
+                            </button>
+                        </Link>
+                    </Route>
+                }
             </div>
         );
     }

@@ -24,6 +24,11 @@ class Supported extends Component {
         });
     } // end supportToRedux
 
+    giveWarning = () => {
+        console.log('Enter a value');
+        alert("Enter a value.");
+    } // end giveWarning
+
     render(){
         console.log('Support this.state:', this.state);
         return( // Can also just use <> </> instead of divs
@@ -33,13 +38,20 @@ class Supported extends Component {
                 <input onChange={(event) => this.handleChange(event)} 
                     type="number" placeholder='1-6' min="1" max="6" />
 
-                <Route>
-                    <Link to="/comments">
-                        <button onClick={this.supportToRedux}>
-                            Next
-                        </button>
-                    </Link>
-                </Route>
+                {                                       // conditional renderind works here because every
+                    this.state.support === '' ?      // change on the page re-renders the return function
+                    <button onClick={this.giveWarning}>
+                        Next
+                    </button>
+                    :
+                    <Route>
+                        <Link to="/comments">
+                            <button onClick={this.supportToRedux}>
+                                Next
+                            </button>
+                        </Link>
+                    </Route>
+                }
             </div>
         );
     }

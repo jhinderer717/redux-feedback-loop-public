@@ -22,4 +22,6 @@
 
 [x] Leave New Feedback on Thank You page initiates new feedback (new reduxStore value, this is default)
 
-[ ] block navigation if blank fields (see above for which)
+[x] block navigation if blank fields (see above for which)
+
+[ ] styling? could asjust spacing to make look like README.md example pics
