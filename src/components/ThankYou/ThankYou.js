@@ -9,6 +9,8 @@ class ThankYou extends Component {
         return( // Can also just use <> </> instead of divs
             <div>
                 Thank you
+                <br></br>
+
                 <Route>
                     <Link to="/">
                         <button>

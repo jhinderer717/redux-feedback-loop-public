@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import './Comments.css';
 
 
 class Comments extends Component {
@@ -10,7 +11,7 @@ class Comments extends Component {
             <div>
                 Any comments you want to leave?
                 <br></br>
-                <input type="text"/>
+                <input className="inputClass" type="text" width="100px"/>
 
                 <Route>
                     <Link to="/review">
