@@ -16,6 +16,8 @@
 
 [ ] get components values into reduxState
 
+[ ] display reduxState values on review page
+
 [ ] submit on review page sends reduxState to database
 
 [ ] Leave New Feedback on Thank You page initiates new feedback (new reduxStore value)
