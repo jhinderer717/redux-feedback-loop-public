@@ -12,6 +12,12 @@
   [x] review
   [x] thank you
 
-[x] Component input fields
+[x] add component input fields
 
-[ ] 
+[ ] get components values into reduxState
+
+[ ] submit on review page sends reduxState to database
+
+[ ] Leave New Feedback on Thank You page initiates new feedback (new reduxStore value)
+
+[ ] block navigation if blank fields (see above for which)
