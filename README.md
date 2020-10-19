@@ -1,7 +1,5 @@
 # redux-feedback-loop
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
 
 ## Description
 
@@ -13,7 +11,6 @@ The redux-feedback-loop is an app to have a user submit feedback to a database. 
 To run this app, you'll need:
 - Node.js
 - Postgres
-- (can't think of anything else)
 
 
 ## Install
